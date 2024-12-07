@@ -224,6 +224,15 @@ lake_image = ImageTk.PhotoImage(lake_resized)
 # Put the image of the lake to canvas
 canvas.create_image(960, 450, image=lake_image)
 
+# Load the image of the lotus flower
+lotus_flower_file = Image.open("elements/lotus_flower.png")
+# Resize the image of the lotus flower
+lotus_flower_resized = lotus_flower_file.resize((70,70))
+# Save it in format for the canvas
+lotus_flower_image = ImageTk.PhotoImage(lotus_flower_resized)
+# Put the image of the lotus flower to canvas
+canvas.create_image(960, 500, image=lotus_flower_image)
+
 
 # Define a function which will count the number of flowers for combination of person and emotion
 def count_number_of_flowers(emotion, person_list):
